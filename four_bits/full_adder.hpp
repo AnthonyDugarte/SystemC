@@ -1,3 +1,7 @@
+/*Anthony Dugarte
+  Falta verificar el complemento y la suma con complemento, están fallas
+*/
+
 #ifndef FULL_ADDER_HPP
 #define FULL_ADDER_HPP
 
