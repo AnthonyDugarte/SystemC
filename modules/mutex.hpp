@@ -29,10 +29,10 @@ private:
   {
     for(size_t it{0}; it < N; ++it)
       pos[it] = ctrl_input[it].read();
-    output.write(input[pos.to_int()].read());
+    output.write(input[pos.to_uint()].read());
   }
 
-  sc_bv<N + 1> pos;
+  sc_bv<N> pos;
 
   sc_signal<data> out_flag;
 };

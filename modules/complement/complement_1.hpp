@@ -11,8 +11,7 @@ public:
   sc_vector<sc_out<bool>> output;
   sc_in<bool> flag;
 
-  complement_1(const sc_module_name& nm) : sc_module(nm), input("input", N), output("output", N),
-    xor_1st("xor_1st", N)
+  complement_1(const sc_module_name& nm) : sc_module(nm), input("input", N), output("output", N), xor_1st("xor_1st", N)
   {
     for(size_t it{0}; it < N; ++it)
     {
