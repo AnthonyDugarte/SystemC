@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 #include <fstream>
-#include <cmath>
 
 template<unsigned int size, typename Data>
 class memory : public sc_module
