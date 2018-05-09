@@ -8,7 +8,7 @@
 #
 # export SYSTEMC_HOME=/usr/local/systemc-2.3.2
 # export LD_LIBRARY_PATH=$SYSTEMC_HOME/lib-linux64
-INCLUDES = -I../../modules/gates -I../../modules -I../../modules/adders -I../../modules/complement -I.
+INCLUDES = -I../../modules_v2.0 -I.
 
 SOURCES = main.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
