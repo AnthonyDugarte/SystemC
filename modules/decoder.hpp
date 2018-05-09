@@ -34,6 +34,5 @@ private:
   sc_vector<and_gate<N>> outs;
 
   sc_vector<sc_signal<bool>> input_neg;
-
 };
 #endif
