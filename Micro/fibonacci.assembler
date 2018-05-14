@@ -1,0 +1,17 @@
+LOAD R0, R4, @0
+LOAD_I R0, R1, 0
+LOAD_I R0, R2, 1
+LOAD_I R0, R5, 2
+STORE R0, R0, 1
+SUB_I R0, R4, 1
+JEZ R0, @16
+ADD R1, R2, R3, 0
+BUB
+LOAD_I R2, R1, 0
+BUB
+LOAD_I R3, R2, 0
+BUB <- al arreglar la limpieza en JEZ, esta bub se elimina
+STORE R5, R1, 0
+ADD_I R0, R5, 1
+JMP @5
+BUB

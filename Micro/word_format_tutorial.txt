@@ -1,0 +1,32 @@
+0000 0000 0000 0000 0000000000000000
+  op      rgA      rgB   rgD               offset
+
+BUB = 0000
+STORE = 0001
+LOAD =  0010
+LOAD_I = 0011
+JEZ = 0100
+= 0101
+= 0110
+= 0111
+ADD = 1000
+ADD_I = 1001
+MUL = 1010
+MUL_I = 1011
+SUB = 1100
+SUB_I = 1101
+= 1110
+JMP = 1111
+
+STORE : @([reg A] + offset) ← [reg Dest]
+LOAD : [reg Dest] ← @([reg A] + offset)
+LOAD_I : [reg Dest] ← ([reg A] + offset)
+ADD_I : [reg Dest] ← ([reg Dest] + [reg A] + offset)
+MUL_I : [reg Dest] ← ([reg Dest] * ([reg A] + offset))
+SUB_I : [reg Dest] ← ([reg Dest] - ([reg A] + offset))
+JEZ : [PC] ← @@([reg A] + offset) if(Z == 0)
+JMP: [PC] ← @@([reg A] + offset)
+
+En caso de haber dependencia, se deben ingresar:
+  -> dos burbujas si es dependencia de ADD, MUL, SUB.
+  -> una burbuja si es dependencia de STORE, LOAD_I, LOAD.

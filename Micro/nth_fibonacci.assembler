@@ -1,0 +1,24 @@
+LOAD R0, R4, @0
+LOAD_I R0, R1, 0
+LOAD_I R0, R2, 1
+SUB_I R0, R4, 1
+JEZ R0, @11
+ADD R1, R2, R3, 0
+BUB
+LOAD_I R2, R1, 0
+BUB
+LOAD_I R3, R2, 0
+JMP @3
+STORE R0, R1, offset
+
+
+@title: Nth fibonacci number assembler code
+@important: data input on [0] would be the nth fibonacci number to search
+    data output [0] would be nth fibonacci number wanted
+    data output [1] would be nth fibonacci wanted
+
+
+@note: negative number excepctions ain't handled
+  1th fibonacci = 0
+  2th fibonacci = 1
+  ...
